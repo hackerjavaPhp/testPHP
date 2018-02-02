@@ -1,0 +1,180 @@
+html, body{
+	height: 100%;
+	width: 100%;
+	font-family: Arial;
+	background-image: url("../img/bg.jpg");
+	color: #fff;
+}
+
+.container{
+	width: 980px;
+	margin: 0 auto;
+}
+
+.bg-header{
+	padding-top: 28px;
+
+	&-info{
+
+		&-b1{
+			margin-left: 44px;
+			float: left;
+			width: 311px;
+		}
+
+		&-logo{
+			float: left;
+		}
+
+		&-b1-phone{
+			font-size: 24px;
+			position: relative;
+		}
+
+		&-b1-adress{
+			font-size: 18px;
+			margin-top: 31px;
+			position: relative;
+		}
+
+		&-b1-phone::before{
+			content: "";
+			position: absolute;
+			width: 26px;
+			height: 30px;
+			background: url("../img/phone.png") no-repeat;
+			left: -26px;
+			top: -3px;
+		}
+
+		&-b1-adress::before{
+			content: "";
+			position: absolute;
+			width: 20px;
+			height: 26px;
+			background: url("../img/target.png") no-repeat;
+			left: -26px;
+			top: -3px;
+		}
+
+		&-b1-link{
+			text-align: right;
+
+			& a{
+				color: #fff;
+				font-size: 14px;
+				text-decoration: underline;
+			}
+		}
+
+
+		&-b2{
+			float: right;
+
+			&-work{
+				font-size: 18px;
+				position: relative;
+				padding-top: 3px;
+			}
+
+				&-work::before{
+					content: "";
+					position: absolute;
+					width: 28px;
+					height: 29px;
+					background: url("../img/time.png") no-repeat;
+					left: -36px;
+					top: -2px;
+			}
+		}
+
+	}
+
+	::after{
+		content: "";
+		display: block;
+		clear: both;
+	}
+
+	// nav
+
+	&-menu{
+
+		// bg
+		    background: rgb(179, 1, 1);
+
+
+
+
+
+
+
+		height: 81px;
+		margin-top: 25px;
+		position: relative;
+
+		&-list{
+			padding-top: 28px;
+		}
+
+		&-list-l{
+			display: block;
+			float: left;
+			position: relative;
+
+		}
+
+		.line::before{
+				content: "";
+				position: absolute;
+				width: 4px;
+				height: 55px;
+				background: url("../img/line.jpg") no-repeat;
+				top: -16px;
+				left: 0px;
+			}
+
+		&-list-l-link{
+			font-size: 18px;
+			color: #fff;
+			text-decoration: none;
+			padding: 0 19.1px;
+		}
+
+			::after{
+			content: "";
+			display: block;
+			clear: both;
+		}
+
+	}
+
+
+}
+
+.bg-header-menu::after{
+	content: "";
+	display: block;
+	margin:0 auto;
+	position: relative;
+	bottom: -16px;
+	background: url("../img/tr.png") no-repeat;
+	width: 71px;
+	height: 13px;
+	left: -8px;
+}
+
+.bg-header-menu::before{
+	content: "";
+	position: absolute;
+	width: 27px;
+	height: 46px;
+	background: url("../img/zoom.png") no-repeat;
+	left: 468px;
+	top: 37px;
+}
+
+.header-icon{
+	position: relative;
+	top: -15px;
+}
