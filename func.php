@@ -1,53 +1,42 @@
 <?php
-/*
- * Это массив с некоторыми данными, которые мы хотим изменить
- * при работе цикла.
- */
+   
+	$arrayName = array('345345345' => array("+375-32-325-34-33", "Vlad"), '3453455445' => array("+375-32-345-54-55", "Elena"), "Vlad");
+	$solt = '$1$rasmusle$';
 
-// 
-$ArrPeople = array("Elena","Goha","Alena");
-$solt = '$1$rasmusle$';
+	print_r(dataCrypt($arrayName, $solt));
 
-function dataCrypt($people, $s){
 
-	$arrayName = array();
 
-	for($i = 0 ; $i < count($people); $i++){
-		
-		
-			$arrayName[] = crypt($people[$i], $s);
-		
+
+
+
+	function dataCrypt($arr, $s){
+
+
+		$resultArray = [];
+
+		foreach ($arr as $key => $value) {
+
+			if(is_array($value)) {
+
+				foreach ($value as $key_2 => $value_2) {
+					
+					$resultArray[] = crypt($value_2, $s);
+
+				}
+
+			}else {
+				$resultArray[] = crypt($value, $s);
+			}
+
+		}
+
+
+		return $resultArray;
+
 
 	}
 
-	return $arrayName;
-
-}
-
-print_r(dataCrypt($ArrPeople, $solt));
-
-// единственное не успел сделать для многомерных массивов цикл!!!
-
-
-
-
-// не нужная функция
-
-// function mdarr_parameter($needle, $job=false) {
-//     if (is_array($needle)) {
-//         foreach($needle as $name => $value) {
-//             $needle[$name] = mdarr_parameter($value, $job);
-//         }
-//     } else {
-//         // Now you do anything you want...
-//         if ($job === true) {
-//             $needle = stripslashes($needle);
-//         } else {
-//             $needle = addslashes($needle);
-//         }
-//     }
-//     return $needle;
-// }
 
 
 
