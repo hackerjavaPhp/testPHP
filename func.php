@@ -6,15 +6,16 @@
 
 // 
 $ArrPeople = array("Elena","Goha","Alena");
+$solt = '$1$rasmusle$';
 
-function dataMd5($people){
+function dataCrypt($people, $s){
 
 	$arrayName = array();
 
 	for($i = 0 ; $i < count($people); $i++){
 		
 		
-			$arrayName[] = md5($people[$i]);
+			$arrayName[] = crypt($people[$i], $s);
 		
 
 	}
@@ -23,7 +24,7 @@ function dataMd5($people){
 
 }
 
-print_r(dataMd5($ArrPeople));
+print_r(dataCrypt($ArrPeople, $solt));
 
 // единственное не успел сделать для многомерных массивов цикл!!!
 
